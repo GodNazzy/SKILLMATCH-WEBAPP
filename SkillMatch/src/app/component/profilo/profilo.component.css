@@ -54,9 +54,11 @@
 .leftPart, .rightPart{
   padding: 0 20px 20px 0;
   height: 100%;
-  background-color: rgb(237, 233, 252);
 }
+.leftPart{
+  background-color: rgb(237, 233, 252);
 
+}
 .leftPart, .rightPart>*{
 
   padding-top: 20px;
@@ -131,7 +133,7 @@ li{
   height: 100%;
 }
 .inbox{
-  background-color:rgb(213, 208, 233) ;
+  background-color: rgb(175, 179, 241);
   padding: 20px;
   width: 100%;
   height: 500px;
@@ -263,7 +265,7 @@ li{
   display: flex;
   height: 100px;
   margin-bottom:14px;
-  border-radius: 5px;
+  border-radius: 10px;
   border: 1px solid black;
 
 }

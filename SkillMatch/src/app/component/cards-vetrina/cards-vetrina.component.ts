@@ -38,7 +38,9 @@ export class CardsVetrinaComponent implements OnInit, AfterViewChecked, AfterCon
   isLavoratore(){
     const utenteLogged = localStorage.getItem("utente");
     const utenteL: Lavoratore | Cliente = JSON.parse(utenteLogged!);
-    return 'ambiti' in utenteL;
+    if (localStorage.getItem("scelta") != null)
+      return 'ambiti' in utenteL;
+    return false;
   }
 
   /*

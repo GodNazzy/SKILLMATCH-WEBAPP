@@ -36,7 +36,8 @@ export class SearchBarComponent implements OnInit, OnDestroy {
     this.annunciService.getAmbiti().subscribe(data=>{
 
       this.ambiti=data
-      this.sortAmbitiConsigliati()
+      if (localStorage.getItem("scelta") != null)
+        this.sortAmbitiConsigliati()
 
     })
 
@@ -44,7 +45,8 @@ export class SearchBarComponent implements OnInit, OnDestroy {
       {
         console.log(data)
         this.province=data
-        this.sortZoneConsigliate()
+        if (localStorage.getItem("scelta") != null)
+          this.sortZoneConsigliate()
       }
     )
   }

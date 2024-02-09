@@ -20,21 +20,6 @@ public class SkillMatchBackEndApplication {
 	public static void main(String[] args) {
 
 		SpringApplication.run(SkillMatchBackEndApplication.class, args);
-/*
-		if(DBManager.getInstance().getAmbitoDao().findAll().isEmpty()) {
-			String[] ambiti = {"Cucina", "Tecnologia", "Edilizia", "Elettronica", "Meccanica", "Informatica", "Altro"};
-			for (int i = 0; i < ambiti.length; i++) {
 
-				Ambito ambito = new Ambito();
-				ambito.setNome(ambiti[i]);
-				DBManager.getInstance().getAmbitoDao().saveOrUpdate(ambito);
-			}
-		}
- */
-		List<Recensione> recList = DBManager.getInstance().getRecensioneDao().findByForeignKeyLavoratore("samu");
-		for (Recensione rec : recList){
-			 System.out.println(rec.getTitolo());
-
-		}
 	}
 }

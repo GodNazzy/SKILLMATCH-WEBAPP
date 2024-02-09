@@ -45,7 +45,9 @@ export class HomeComponent implements OnInit {
         console.log(data)
         console.log(data.length)
         this.annunci = data
-      this.sortAnnunciConsigliati()
+      console.log("annunci: " +this.annunci)
+      if (localStorage.getItem("scelta") != null)
+        this.sortAnnunciConsigliati()
 
       }
     )
